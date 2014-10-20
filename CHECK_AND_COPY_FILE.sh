@@ -5,11 +5,11 @@
 #Parameter 2: target file
 
 if [ -f "$2" ]; then
-        diff /opt/.TEMPLATES/$1 $2;
+        diff /opt/templates/$1 $2;
         if [ $? -ne 0 ]; then
-                /bin/cp -f /opt/.TEMPLATES/$1 $2;
+                /bin/cp -f /opt/templates/$1 $2;
         fi;
 else    
-        cp /opt/.TEMPLATES/$1 $2;
+        cp /opt/templates/$1 $2;
 fi
 

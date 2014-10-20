@@ -15,11 +15,11 @@ main(){
 		echo "// tags: " >> $FILENAME;
 		echo "//" >> $FILENAME;
 	
-		cat /opt/.TEMPLATES/Ctemplate.c >> ./$FILENAME;
+		cat /opt/templates/Ctemplate.c >> ./$FILENAME;
 	else
 		echo "file already exists";
 	fi;	
-	/shared_scripts/cScripts/ENV_SET_UP.sh $HEADER
+	/opt/scripts/ENV_SET_UP.sh $HEADER
 
 	cat $FILENAME | sed "s/THISPROG/$HEADER.h/g" > $FILENAME &
 }
